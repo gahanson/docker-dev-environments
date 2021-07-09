@@ -1,0 +1,9 @@
+version: '3'
+services:
+
+  debiandev:
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
+    restart: unless-stopped
+    command: tail -F anything #this cmd prevents docker from stopping the container
