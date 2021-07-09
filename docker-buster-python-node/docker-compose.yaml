@@ -5,5 +5,7 @@ services:
     build:
       context: ./
       dockerfile: ./Dockerfile
+    volumes:
+      - ./src:/code/
     restart: unless-stopped
     command: tail -F anything #this cmd prevents docker from stopping the container
